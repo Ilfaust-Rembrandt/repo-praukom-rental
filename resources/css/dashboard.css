@@ -1,0 +1,920 @@
+.container {
+    position: relative;
+} .item{ position: absolute;
+}
+#item_0 {
+     left: 600px;
+    top: 70px;
+    font-size: 48px;
+    width: 239px;
+    font-family: "Inter";
+    font-weight: Semi Bold;
+    color: rgba(0, 0, 0, 1);
+}
+#item_1 {
+     left: 229px;
+    top: 146px;
+    width: 299px;
+    height: 606px;
+    background-color: rgba(217, 217, 217, 1);
+}
+#item_2 {
+     left: 229px;
+    top: 199.73px;
+    width: 299px;
+    height: 42.79px;
+    background-color: rgba(0, 0, 0, 1);
+}
+#item_3 {
+     left: 229px;
+    top: 300.24px;
+    width: 299px;
+    height: 195.03px;
+}
+#item_4 {
+     left: 326px;
+    top: 212.67px;
+    font-size: 15px;
+    width: 105px;
+    font-family: "Inter";
+    color: rgba(255, 255, 255, 1);
+}
+#item_5 {
+     left: 294px;
+    top: 519.15px;
+    font-size: 16px;
+    width: 217px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_6 {
+     left: 318px;
+    top: 160.93px;
+    font-size: 20px;
+    width: 127px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_11 {
+     left: 240px;
+    top: 567px;
+    font-size: 15px;
+    width: 93px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_12 {
+     left: 240px;
+    top: 603px;
+    font-size: 15px;
+    width: 93px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_13 {
+     left: 240px;
+    top: 636px;
+    font-size: 15px;
+    width: 93px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_14 {
+     left: 402px;
+    top: 567px;
+    font-size: 15px;
+    width: 117px;
+    font-family: "Inter";
+    font-weight: Semi Bold Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_15 {
+     left: 505px;
+    top: 603px;
+    font-size: 15px;
+    width: 11px;
+    font-family: "Inter";
+    font-weight: Semi Bold Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_16 {
+     left: 476px;
+    top: 636px;
+    font-size: 15px;
+    width: 46px;
+    font-family: "Inter";
+    font-weight: Semi Bold Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_17 {
+     left: 387px;
+    top: 697px;
+    width: 61px;
+    height: 27px;
+    background-color: rgba(255, 230, 0, 1);
+}
+#item_18 {
+     left: 302px;
+    top: 697px;
+    width: 61px;
+    height: 27px;
+    background-color: rgba(233, 211, 19, 1);
+}
+#item_19 {
+     left: 312px;
+    top: 701px;
+    font-size: 15px;
+    width: 51px;
+    font-family: "Inter";
+    font-weight: Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_20 {
+     left: 397px;
+    top: 701px;
+    font-size: 15px;
+    width: 51px;
+    font-family: "Inter";
+    font-weight: Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_21 {
+     left: 326px;
+    top: 212.67px;
+    font-size: 15px;
+    width: 105px;
+    font-family: "Inter";
+    color: rgba(255, 255, 255, 1);
+}
+#item_22 {
+     left: 570px;
+    top: 144px;
+    width: 299px;
+    height: 609px;
+    background-color: rgba(217, 217, 217, 1);
+}
+#item_23 {
+     left: 570px;
+    top: 198px;
+    width: 299px;
+    height: 43px;
+    background-color: rgba(0, 0, 0, 1);
+}
+#item_24 {
+     left: 570px;
+    top: 299px;
+    width: 299px;
+    height: 196px;
+}
+#item_25 {
+     left: 632px;
+    top: 519px;
+    font-size: 16px;
+    width: 217px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_26 {
+     left: 667px;
+    top: 211px;
+    font-size: 15px;
+    width: 105px;
+    font-family: "Inter";
+    color: rgba(255, 255, 255, 1);
+}
+#item_27 {
+     left: 686px;
+    top: 160px;
+    font-size: 20px;
+    width: 86px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_28 {
+     left: 847px;
+    top: 603px;
+    font-size: 15px;
+    width: 11px;
+    font-family: "Inter";
+    font-weight: Semi Bold Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_33 {
+     left: 580px;
+    top: 567px;
+    font-size: 15px;
+    width: 93px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_34 {
+     left: 580px;
+    top: 603px;
+    font-size: 15px;
+    width: 93px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_35 {
+     left: 580px;
+    top: 636px;
+    font-size: 15px;
+    width: 93px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_36 {
+     left: 741px;
+    top: 567px;
+    font-size: 15px;
+    width: 117px;
+    font-family: "Inter";
+    font-weight: Semi Bold Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_37 {
+     left: 803px;
+    top: 636px;
+    font-size: 15px;
+    width: 55px;
+    font-family: "Inter";
+    font-weight: Semi Bold Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_38 {
+     left: 727px;
+    top: 697px;
+    width: 61px;
+    height: 27px;
+    background-color: rgba(255, 230, 0, 1);
+}
+#item_39 {
+     left: 642px;
+    top: 697px;
+    width: 61px;
+    height: 27px;
+    background-color: rgba(233, 211, 19, 1);
+}
+#item_40 {
+     left: 642px;
+    top: 697px;
+    width: 61px;
+    height: 27px;
+    background-color: rgba(233, 211, 19, 1);
+}
+#item_41 {
+     left: 652px;
+    top: 701px;
+    font-size: 15px;
+    width: 51px;
+    font-family: "Inter";
+    font-weight: Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_42 {
+     left: 737px;
+    top: 701px;
+    font-size: 15px;
+    width: 51px;
+    font-family: "Inter";
+    font-weight: Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_43 {
+     left: 911px;
+    top: 144px;
+    width: 299px;
+    height: 609px;
+    background-color: rgba(217, 217, 217, 1);
+}
+#item_44 {
+     left: 911px;
+    top: 198px;
+    width: 299px;
+    height: 43px;
+    background-color: rgba(0, 0, 0, 1);
+}
+#item_45 {
+     left: 911px;
+    top: 299px;
+    width: 299px;
+    height: 196px;
+}
+#item_46 {
+     left: 980px;
+    top: 520px;
+    font-size: 16px;
+    width: 217px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_47 {
+     left: 1008px;
+    top: 211px;
+    font-size: 15px;
+    width: 105px;
+    font-family: "Inter";
+    color: rgba(255, 255, 255, 1);
+}
+#item_48 {
+     left: 1019px;
+    top: 160px;
+    font-size: 20px;
+    width: 86px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_53 {
+     left: 921px;
+    top: 567px;
+    font-size: 15px;
+    width: 93px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_54 {
+     left: 921px;
+    top: 603px;
+    font-size: 15px;
+    width: 93px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_55 {
+     left: 921px;
+    top: 636px;
+    font-size: 15px;
+    width: 93px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_56 {
+     left: 1146px;
+    top: 567px;
+    font-size: 15px;
+    width: 51px;
+    font-family: "Inter";
+    font-weight: Semi Bold Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_57 {
+     left: 1186px;
+    top: 604px;
+    font-size: 15px;
+    width: 11px;
+    font-family: "Inter";
+    font-weight: Semi Bold Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_58 {
+     left: 1157px;
+    top: 637px;
+    font-size: 15px;
+    width: 46px;
+    font-family: "Inter";
+    font-weight: Semi Bold Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_59 {
+     left: 1068px;
+    top: 697px;
+    width: 61px;
+    height: 27px;
+    background-color: rgba(255, 230, 0, 1);
+}
+#item_60 {
+     left: 983px;
+    top: 697px;
+    width: 61px;
+    height: 27px;
+    background-color: rgba(233, 211, 19, 1);
+}
+#item_61 {
+     left: 993px;
+    top: 701px;
+    font-size: 15px;
+    width: 51px;
+    font-family: "Inter";
+    font-weight: Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_62 {
+     left: 1078px;
+    top: 701px;
+    font-size: 15px;
+    width: 51px;
+    font-family: "Inter";
+    font-weight: Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_63 {
+     left: 0px;
+    top: 806px;
+    width: 1440px;
+    height: 218px;
+    background-color: rgba(238, 242, 20, 1);
+}
+#item_64 {
+     left: 0px;
+    top: 806px;
+    width: 1440px;
+    height: 218px;
+    background-color: rgba(238, 242, 20, 1);
+}
+#item_65 {
+     left: 270px;
+    top: 979px;
+    width: 142px;
+    height: 29px;
+    background-color: rgba(57, 58, 43, 1);
+}
+#item_66 {
+     left: 868px;
+    top: 806px;
+    width: 342px;
+    height: 218px;
+}
+#item_67 {
+     left: 270px;
+    top: 824px;
+    font-size: 36px;
+    width: 488px;
+    font-family: "Inter";
+    font-weight: Medium Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_68 {
+     left: 304px;
+    top: 983px;
+    font-size: 15px;
+    width: 118px;
+    font-family: "Inter";
+    font-weight: Semi Bold;
+    color: rgba(255, 255, 255, 1);
+}
+#item_69 {
+     left: 278px;
+    top: 984px;
+    width: 20px;
+    height: 18px;
+}
+.container {
+    position: relative;
+} .item{ position: absolute;
+}
+#item_0 {
+     left: 600px;
+    top: 70px;
+    font-size: 48px;
+    width: 239px;
+    font-family: "Inter";
+    font-weight: Semi Bold;
+    color: rgba(0, 0, 0, 1);
+}
+#item_1 {
+     left: 229px;
+    top: 146px;
+    width: 299px;
+    height: 606px;
+    background-color: rgba(217, 217, 217, 1);
+}
+#item_2 {
+     left: 229px;
+    top: 199.73px;
+    width: 299px;
+    height: 42.79px;
+    background-color: rgba(0, 0, 0, 1);
+}
+#item_3 {
+     left: 229px;
+    top: 300.24px;
+    width: 299px;
+    height: 195.03px;
+}
+#item_4 {
+     left: 326px;
+    top: 212.67px;
+    font-size: 15px;
+    width: 105px;
+    font-family: "Inter";
+    color: rgba(255, 255, 255, 1);
+}
+#item_5 {
+     left: 294px;
+    top: 519.15px;
+    font-size: 16px;
+    width: 217px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_6 {
+     left: 318px;
+    top: 160.93px;
+    font-size: 20px;
+    width: 127px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_11 {
+     left: 240px;
+    top: 567px;
+    font-size: 15px;
+    width: 93px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_12 {
+     left: 240px;
+    top: 603px;
+    font-size: 15px;
+    width: 93px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_13 {
+     left: 240px;
+    top: 636px;
+    font-size: 15px;
+    width: 93px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_14 {
+     left: 402px;
+    top: 567px;
+    font-size: 15px;
+    width: 117px;
+    font-family: "Inter";
+    font-weight: Semi Bold Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_15 {
+     left: 505px;
+    top: 603px;
+    font-size: 15px;
+    width: 11px;
+    font-family: "Inter";
+    font-weight: Semi Bold Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_16 {
+     left: 476px;
+    top: 636px;
+    font-size: 15px;
+    width: 46px;
+    font-family: "Inter";
+    font-weight: Semi Bold Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_17 {
+     left: 387px;
+    top: 697px;
+    width: 61px;
+    height: 27px;
+    background-color: rgba(255, 230, 0, 1);
+}
+#item_18 {
+     left: 302px;
+    top: 697px;
+    width: 61px;
+    height: 27px;
+    background-color: rgba(233, 211, 19, 1);
+}
+#item_19 {
+     left: 312px;
+    top: 701px;
+    font-size: 15px;
+    width: 51px;
+    font-family: "Inter";
+    font-weight: Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_20 {
+     left: 397px;
+    top: 701px;
+    font-size: 15px;
+    width: 51px;
+    font-family: "Inter";
+    font-weight: Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_21 {
+     left: 326px;
+    top: 212.67px;
+    font-size: 15px;
+    width: 105px;
+    font-family: "Inter";
+    color: rgba(255, 255, 255, 1);
+}
+#item_22 {
+     left: 570px;
+    top: 144px;
+    width: 299px;
+    height: 609px;
+    background-color: rgba(217, 217, 217, 1);
+}
+#item_23 {
+     left: 570px;
+    top: 198px;
+    width: 299px;
+    height: 43px;
+    background-color: rgba(0, 0, 0, 1);
+}
+#item_24 {
+     left: 570px;
+    top: 299px;
+    width: 299px;
+    height: 196px;
+}
+#item_25 {
+     left: 632px;
+    top: 519px;
+    font-size: 16px;
+    width: 217px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_26 {
+     left: 667px;
+    top: 211px;
+    font-size: 15px;
+    width: 105px;
+    font-family: "Inter";
+    color: rgba(255, 255, 255, 1);
+}
+#item_27 {
+     left: 686px;
+    top: 160px;
+    font-size: 20px;
+    width: 86px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_28 {
+     left: 847px;
+    top: 603px;
+    font-size: 15px;
+    width: 11px;
+    font-family: "Inter";
+    font-weight: Semi Bold Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_33 {
+     left: 580px;
+    top: 567px;
+    font-size: 15px;
+    width: 93px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_34 {
+     left: 580px;
+    top: 603px;
+    font-size: 15px;
+    width: 93px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_35 {
+     left: 580px;
+    top: 636px;
+    font-size: 15px;
+    width: 93px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_36 {
+     left: 741px;
+    top: 567px;
+    font-size: 15px;
+    width: 117px;
+    font-family: "Inter";
+    font-weight: Semi Bold Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_37 {
+     left: 803px;
+    top: 636px;
+    font-size: 15px;
+    width: 55px;
+    font-family: "Inter";
+    font-weight: Semi Bold Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_38 {
+     left: 727px;
+    top: 697px;
+    width: 61px;
+    height: 27px;
+    background-color: rgba(255, 230, 0, 1);
+}
+#item_39 {
+     left: 642px;
+    top: 697px;
+    width: 61px;
+    height: 27px;
+    background-color: rgba(233, 211, 19, 1);
+}
+#item_40 {
+     left: 642px;
+    top: 697px;
+    width: 61px;
+    height: 27px;
+    background-color: rgba(233, 211, 19, 1);
+}
+#item_41 {
+     left: 652px;
+    top: 701px;
+    font-size: 15px;
+    width: 51px;
+    font-family: "Inter";
+    font-weight: Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_42 {
+     left: 737px;
+    top: 701px;
+    font-size: 15px;
+    width: 51px;
+    font-family: "Inter";
+    font-weight: Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_43 {
+     left: 911px;
+    top: 144px;
+    width: 299px;
+    height: 609px;
+    background-color: rgba(217, 217, 217, 1);
+}
+#item_44 {
+     left: 911px;
+    top: 198px;
+    width: 299px;
+    height: 43px;
+    background-color: rgba(0, 0, 0, 1);
+}
+#item_45 {
+     left: 911px;
+    top: 299px;
+    width: 299px;
+    height: 196px;
+}
+#item_46 {
+     left: 980px;
+    top: 520px;
+    font-size: 16px;
+    width: 217px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_47 {
+     left: 1008px;
+    top: 211px;
+    font-size: 15px;
+    width: 105px;
+    font-family: "Inter";
+    color: rgba(255, 255, 255, 1);
+}
+#item_48 {
+     left: 1019px;
+    top: 160px;
+    font-size: 20px;
+    width: 86px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_53 {
+     left: 921px;
+    top: 567px;
+    font-size: 15px;
+    width: 93px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_54 {
+     left: 921px;
+    top: 603px;
+    font-size: 15px;
+    width: 93px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_55 {
+     left: 921px;
+    top: 636px;
+    font-size: 15px;
+    width: 93px;
+    font-family: "Inter";
+    color: rgba(0, 0, 0, 1);
+}
+#item_56 {
+     left: 1146px;
+    top: 567px;
+    font-size: 15px;
+    width: 51px;
+    font-family: "Inter";
+    font-weight: Semi Bold Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_57 {
+     left: 1186px;
+    top: 604px;
+    font-size: 15px;
+    width: 11px;
+    font-family: "Inter";
+    font-weight: Semi Bold Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_58 {
+     left: 1157px;
+    top: 637px;
+    font-size: 15px;
+    width: 46px;
+    font-family: "Inter";
+    font-weight: Semi Bold Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_59 {
+     left: 1068px;
+    top: 697px;
+    width: 61px;
+    height: 27px;
+    background-color: rgba(255, 230, 0, 1);
+}
+#item_60 {
+     left: 983px;
+    top: 697px;
+    width: 61px;
+    height: 27px;
+    background-color: rgba(233, 211, 19, 1);
+}
+#item_61 {
+     left: 993px;
+    top: 701px;
+    font-size: 15px;
+    width: 51px;
+    font-family: "Inter";
+    font-weight: Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_62 {
+     left: 1078px;
+    top: 701px;
+    font-size: 15px;
+    width: 51px;
+    font-family: "Inter";
+    font-weight: Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_63 {
+     left: 0px;
+    top: 806px;
+    width: 1440px;
+    height: 218px;
+    background-color: rgba(238, 242, 20, 1);
+}
+#item_64 {
+     left: 0px;
+    top: 806px;
+    width: 1440px;
+    height: 218px;
+    background-color: rgba(238, 242, 20, 1);
+}
+#item_65 {
+     left: 270px;
+    top: 979px;
+    width: 142px;
+    height: 29px;
+    background-color: rgba(57, 58, 43, 1);
+}
+#item_66 {
+     left: 868px;
+    top: 806px;
+    width: 342px;
+    height: 218px;
+}
+#item_67 {
+     left: 270px;
+    top: 824px;
+    font-size: 36px;
+    width: 488px;
+    font-family: "Inter";
+    font-weight: Medium Italic;
+    color: rgba(0, 0, 0, 1);
+}
+#item_68 {
+     left: 304px;
+    top: 983px;
+    font-size: 15px;
+    width: 118px;
+    font-family: "Inter";
+    font-weight: Semi Bold;
+    color: rgba(255, 255, 255, 1);
+}
+#item_69 {
+     left: 278px;
+    top: 984px;
+    width: 20px;
+    height: 18px;
+}
