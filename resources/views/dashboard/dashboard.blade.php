@@ -2,7 +2,7 @@
 @section('title','Daftar Mobil')
 @section('content')
 <div class="row">
-    <div class="col-md-12 mx-auto">
+    <div class="col-md-auto mx-auto">
         <div class="card">
             <div class="card-header">
                 <span class="h1">
@@ -25,15 +25,26 @@
                                     <th>NAMA MOBIL</th>
                                     <th>MERK MOBIL</th>
                                     <th>JENIS MOBIL</th>
+                                    <th>KONDISI</th>
                                     <th>BIAYA</th>
+                                    <th>AKSI</th>
                                 </tr>
                             <tbody>
                             @foreach($mobil as $m)
                                     <tr>
-                                        <td>{{$m->nama_mobil}}</td>
+                                        <td>{{$m->nama}}</td>
                                         <td>{{$m->merk}}</td>
                                         <td>{{$m->jenis}}</td>
+                                        <td>{{$m->id_kondisi}}</td>
                                         <td>{{$m->biaya}}</td>
+                                        <td>
+                                            <a href="dashboard/edit/{{$m->id_mobil}}">
+                                                <button class="btn btn-primary">EDIT</button>
+                                            </a>
+                                            <a href="dashboard/hapus/{{$m->id_mobil}}">
+                                                <button class="btn btn-danger">HAPUS</button>
+                                            </a>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>
