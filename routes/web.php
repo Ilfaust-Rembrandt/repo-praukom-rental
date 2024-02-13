@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\SelectionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('selection');
-});
+Route::get('/', [LoginController::class, 'LoginForm'])
+->name('login.form');
 
-Route::get('/login', function(){
-    return view('login');
-});
+Route::get('/selection', [SelectionController::class, 'SelectionPage'])
+->name('selection.page')->middleware;
