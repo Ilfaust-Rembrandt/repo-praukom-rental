@@ -11,7 +11,7 @@
             </div>
             <div class="card-body">
             <div class="row"> 
-                <form method="POST" action="save">
+                <form method="POST" action="/save">
                     <div class="row">
                     <div class="col-md-4">
                             <button type="submit" class="btn btn-success">Simpan</button>
