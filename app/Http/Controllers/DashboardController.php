@@ -17,7 +17,7 @@ public function add(){
     return view('dashboard.addboard');
 }
 public function save(Request $request, Mobil $mobil){
-    $data = $request->validate([
+    $validate = $request->validate([
         'id_mobil'=>['required'],
         'nama' => ['required'],
         'merk' => ['required'],
@@ -26,11 +26,12 @@ public function save(Request $request, Mobil $mobil){
 
     ]);
 
-    if($data):
-        $mobil->create($data);
-        return redirect('/dashboard/dashboard');
+    if($validate):
+        Mobil::where('id_mobil', $request->get('id_mobil'))
+        ->update($validate);
+        return redirect('/dashboard/addboard')->with('Success');
     else:
-        return redirect('dashboard/addboard/save');
+        return redirect('dashboard/addboard/save')->with('Fail');
     endif;
 }
 public function update(Request $request){

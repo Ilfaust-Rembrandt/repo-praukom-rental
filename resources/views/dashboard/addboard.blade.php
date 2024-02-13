@@ -11,10 +11,10 @@
             </div>
             <div class="card-body">
             <div class="row"> 
-                <form method="POST" action="simpan">
+                <form method="POST" action="addboard/save">
                     <div class="row">
                     <div class="col-md-4">
-                            <button type="submit" class="btn btn-success">SIMPAN</button>
+                            <button type="submit" class="btn btn-success">Simpan</button>
                         </div>
                             <p>
                             <hr>
