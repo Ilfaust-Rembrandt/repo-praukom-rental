@@ -11,7 +11,7 @@
             </div>
             <div class="card-body">
             <div class="row"> 
-                <form method="POST" action="/save">
+                <form method="POST" action="save">
                     <div class="row">
                     <div class="col-md-4">
                             <button type="submit" class="btn btn-success">Simpan</button>
@@ -22,23 +22,24 @@
                         <div class="col-md-5">
                         <div class="form-group">
                                 <label>Nama Mobil</label>
-                                <input type="text" class="form-control" name="nama_mobil" />
+                                <input type="text" class="form-control" name="nama" />
                             </div>
                             <div class="form-group">
                                 <label>Merk Mobil</label>
-                                <input type="text" class="form-control" name="merk_mobil" />
+                                <input type="text" class="form-control" name="merk" />
                             </div>
                             <div class="form-group">
                                 <label>Jenis Mobil</label>
-                                <input type="text" class="form-control" name="jenis_mobil" />
+                                <input type="text" class="form-control" name="jenis" />
                             </div>
                             <div class="form-group">
                                 <label>Kondisi</label>
-                                <select name="kondisi" id="kondisi">
-                                    <option value="1">Rusak</option>
-                                    <option value="2">Bengkel</option>
-                                    <option value="3">Aman</option>
-                                </select>
+                                @foreach ($jenis_kondisi as $item)
+                                    <option value="" disabled hidden selected>Select Kondisi</option>
+                                    <option value="{{$item->id_kondisi}}">
+                                        {{$item->id_kondisi}}
+                                    </option>
+                                @endforeach
                             </div>
                             <div class="form-group">
                                 <label>Biaya</label>

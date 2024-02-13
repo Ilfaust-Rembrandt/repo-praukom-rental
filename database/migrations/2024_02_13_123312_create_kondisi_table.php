@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('kondisi', function (Blueprint $table) {
             $table->integer('id_kondisi', true)->autoIncrement();
             $table->integer('id_servis');
-            $table->text('deskripsi');
+            $table->string('jenis_kondisi');
 
         });
         Schema::table('kondisi', function($table){

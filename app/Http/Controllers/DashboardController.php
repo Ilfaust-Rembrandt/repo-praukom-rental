@@ -22,6 +22,7 @@ public function Save(Request $request, Mobil $mobil){
         'nama' => ['required'],
         'merk' => ['required'],
         'jenis' => ['required'],
+        'id_kondisi'=>['required'],
         'biaya' => ['required']
 
     ]);
