@@ -1,50 +1,47 @@
-@extends('dashboard.layout')
-@section('title', 'Admin Board')
+@extends('layout.layout')
+@section('title','Daftar Cabang')
 @section('content')
 <div class="row">
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
                 <span class="h1">
-                    Tambah data Mobil
+                    Data Mobil
                 </span>
             </div>
-            <div class="card-body">
-                <form method="POST" action="simpan">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label>Nama Mobil</label>
-                                <input type="text" class="form-control" name="nama_mobil" />
-                            </div>
-                            <div class="form-group">
-                                <label>Merk Mobil</label>
-                                <input type="text" class="form-control" name="merk_mobil" />
-                            </div>
-                            <div class="form-group">
-                                <label>Jenis Mobil</label>
-                                <input type="text" class="form-control" name="jenis_mobil" />
-                            </div>
-                            <div class="form-group">
-                                <label>Biaya</label>
-                                <input type="int" class="form-control" name="biaya" />
-                            </div>
-                            <div class="form-group">
-                                <label>Penanggung Jawab</label>
-                                <input type="text" class="form-control" name="kontak" />
-                                @csrf
-                            </div>
-                        </div>
-                        
-                    </div>
-                </form>
+            <div class="cad-body">
                 <div class="row">
-                        <div class="col-md-4">
-                            <button type="submit" class="btn btn-success">SIMPAN</button>
-                        </div>
-                        <p>
-                            <hr>
+                    <div class="col-md-4">
+                        <a href="cabang/tambah">
+                            <btn class="btn btn-success">Tambah Data Mobil</btn>
+                        </a>
+
                     </div>
+                    <p>
+                        <hr>
+                        <table class="table table-hover table-bordered DataTable">
+                            <thead>
+                                <tr>
+                                    <th>NAMA MOBIL</th>
+                                    <th>MERK MOBIL</th>
+                                    <th>JENIS MOBIL</th>
+                                    <th>BIAYA</th>
+                                    <th>PENANGGUNG JAWAB</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($mobil as $m)
+                                    <tr>
+                                        <td>{{$m->nama_mobil}}</td>
+
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+            <div class="card-footer">
+
             </div>
         </div>
     </div>
