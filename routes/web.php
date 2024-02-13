@@ -19,4 +19,6 @@ Route::get('/', [LoginController::class, 'LoginForm'])
 ->name('login.form');
 
 Route::get('/selection', [SelectionController::class, 'SelectionPage'])
-->name('selection.page')->middleware;
+->name('selection.page')->middleware('access');
+
+
