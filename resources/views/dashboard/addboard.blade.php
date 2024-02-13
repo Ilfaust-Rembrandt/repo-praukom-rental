@@ -1,6 +1,6 @@
 @extends('dashboard.layout')
 @section('title', 'Admin Board')
-@section('content')
+@section('tambah')
 <div class="row">
     <div class="col-md-12">
         <div class="card">
@@ -14,10 +14,6 @@
                     <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
-                                <label>Nama Mobil</label>
-                                <input type="text" class="form-control" name="nama_mobil" />
-                            </div>
-                            <div class="form-group">
                                 <label>Merk Mobil</label>
                                 <input type="text" class="form-control" name="merk_mobil" />
                             </div>
@@ -28,10 +24,6 @@
                             <div class="form-group">
                                 <label>Biaya</label>
                                 <input type="int" class="form-control" name="biaya" />
-                            </div>
-                            <div class="form-group">
-                                <label>Penanggung Jawab</label>
-                                <input type="text" class="form-control" name="kontak" />
                                 @csrf
                             </div>
                         </div>

@@ -1,18 +1,19 @@
-@extends('layout.layout')
-@section('title','Daftar Cabang')
+@extends('dashboard.layout')
+@section('title','Daftar Mobil')
 @section('content')
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 mx-auto">
         <div class="card">
             <div class="card-header">
                 <span class="h1">
                     Data Mobil
                 </span>
             </div>
-            <div class="cad-body">
+            <div class="card-body">
                 <div class="row">
-                    <div class="col-md-4">
-                        <a href="cabang/tambah">
+                    <div class="col-md-auto">
+                        <a href="dashboard/addboard">
+                            <br>
                             <btn class="btn btn-success">Tambah Data Mobil</btn>
                         </a>
 
@@ -20,20 +21,19 @@
                     <p>
                         <hr>
                         <table class="table table-hover table-bordered DataTable">
-                            <thead>
                                 <tr>
                                     <th>NAMA MOBIL</th>
                                     <th>MERK MOBIL</th>
                                     <th>JENIS MOBIL</th>
                                     <th>BIAYA</th>
-                                    <th>PENANGGUNG JAWAB</th>
                                 </tr>
-                            </thead>
                             <tbody>
-                                @foreach($mobil as $m)
+                            @foreach($mobil as $m)
                                     <tr>
                                         <td>{{$m->nama_mobil}}</td>
-
+                                        <td>{{$m->merk}}</td>
+                                        <td>{{$m->jenis}}</td>
+                                        <td>{{$m->biaya}}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
@@ -41,7 +41,6 @@
                 </div>
             </div>
             <div class="card-footer">
-
             </div>
         </div>
     </div>

@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\MobilController;
 use App\Http\Controllers\SelectionController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,7 +23,7 @@ Route::get('/selection', [SelectionController::class, 'SelectionPage'])
 ->name('selection.page');
 Route::prefix('dashboard')->group(function(){
     Route::get('/', [DashboardController::class, 'AdminBoard'])->name('admin.board');
-    Route::post('/addboard');
+    Route::get('/addboard');
 });
-Route::get('/mobil', [MobilController::class, 'index'])->name('mobil.index');
+
 
