@@ -24,7 +24,7 @@ Route::get('/selection', [SelectionController::class, 'SelectionPage'])
 Route::prefix('dashboard')->group(function(){
     Route::get('/', [DashboardController::class, 'AdminBoard'])->name('admin.board');
     Route::get('/addboard', [DashboardController::class, 'add'])->name('admin.add');
-    Route::post('/save',[DashboardController::class, 'save'])->name('admin.save');
+    Route::post('/addboard/save',[DashboardController::class, 'save'])->name('admin.save');
 });
 
 

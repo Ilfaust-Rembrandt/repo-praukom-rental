@@ -10,15 +10,15 @@
                 </span>
             </div>
             <div class="card-body">
-            <div class="row">
-                        <div class="col-md-4">
-                            <button type="submit" class="btn btn-success">SIMPAN</button>
-                        </div>
-                        <p>
-                            <hr>
-                    </div>  
+            <div class="row"> 
                 <form method="POST" action="simpan">
                     <div class="row">
+                    <div class="col-md-4">
+                            <button type="submit" class="btn btn-success">SIMPAN</button>
+                        </div>
+                            <p>
+                            <hr>
+                    </div> 
                         <div class="col-md-5">
                         <div class="form-group">
                                 <label>Nama Mobil</label>

@@ -18,6 +18,7 @@ public function add(){
 }
 public function save(Request $request, Mobil $mobil){
     $data = $request->validate([
+        'id_mobil'=>['required'],
         'nama' => ['required'],
         'merk' => ['required'],
         'jenis' => ['required'],
@@ -26,20 +27,14 @@ public function save(Request $request, Mobil $mobil){
     ]);
 
     if($data):
-        $data['id_mobil'] = 1;
         $mobil->create($data);
         return redirect('/dashboard/dashboard');
     else:
-        return view('dashboard/addboard/save');
+        return redirect('dashboard/addboard/save');
     endif;
 }
 public function update(Request $request){
     //
-    $validate = $request->validate(
-        [
-            ''=> [''],
-        ]
-        );
 }
 public function delete(){
 
