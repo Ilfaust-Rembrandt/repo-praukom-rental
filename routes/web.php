@@ -22,9 +22,9 @@ Route::get('/', [LoginController::class, 'LoginForm'])
 Route::get('/selection', [SelectionController::class, 'SelectionPage'])
 ->name('selection.page');
 Route::prefix('dashboard')->group(function(){
-    Route::get('/', [DashboardController::class, 'AdminBoard'])->name('admin.board');
-    Route::get('/addboard', [DashboardController::class, 'add'])->name('admin.add');
-    Route::post('/addboard/save',[DashboardController::class, 'save'])->name('admin.save');
+    Route::get('/', [DashboardController::class, 'AdminBoard'])->name('adminboard');
+    Route::get('/addboard', [DashboardController::class, 'add'])->name('adminadd');
+    Route::post('/save',[DashboardController::class, 'save'])->name('adminsave');
 });
 
 

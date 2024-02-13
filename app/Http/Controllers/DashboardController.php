@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
+    
     public function AdminBoard(Mobil $mobil){
         $data = [
             'mobil' => $mobil->all()
@@ -16,9 +17,8 @@ class DashboardController extends Controller
 public function add(){
     return view('dashboard.addboard');
 }
-public function save(Request $request, Mobil $mobil){
-    $validate = $request->validate([
-        'id_mobil'=>['required'],
+public function Save(Request $request, Mobil $mobil){
+    $data = $request->validate([
         'nama' => ['required'],
         'merk' => ['required'],
         'jenis' => ['required'],
@@ -26,12 +26,11 @@ public function save(Request $request, Mobil $mobil){
 
     ]);
 
-    if($validate):
-        Mobil::where('id_mobil', $request->get('id_mobil'))
-        ->update($validate);
-        return redirect('/dashboard/addboard')->with('Success');
+    if($data):
+        $mobil->create($data);
+        return redirect('/dashboard/addboard');
     else:
-        return redirect('dashboard/addboard/save')->with('Fail');
+        return redirect('/dashboard/addboard/save');
     endif;
 }
 public function update(Request $request){
