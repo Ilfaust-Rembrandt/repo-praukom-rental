@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('username');
             $table->integer('level');
             $table->string('password');
-            $table->integer('id_session');
         });
     }
 
