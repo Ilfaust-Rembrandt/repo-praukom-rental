@@ -24,8 +24,7 @@ class LoginController extends Controller
             [
                 'username'=>'required|string|max:250',
                 'password'=>'required|string|max:250|unique:users',
-            ],
-            );
+            ]);
             // user::create([
             //     'username'=>$request->username,
             //     'password'=>Hash::make($request->password)
