@@ -2,7 +2,7 @@
 @section('title', 'Login')
 @section('content')
     <div class="container">
-        <div class="row">
+        <div class="row d-flex justify-content-center">
             <div class="col-lg-4">
                 <form action="{{route('register')}}" method="post" class="needs-validation">
                 <div class="card">

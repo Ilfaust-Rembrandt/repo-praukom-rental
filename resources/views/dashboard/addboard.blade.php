@@ -39,7 +39,6 @@
                                     <option value="Aman">Aman</option>
                                     <option value="Bengkel">Bengkel</option>
                                 </select>
-                                <input type="text" class="form-control" name="jenis" />
                             </div>
                             <div class="form-group">
                                 <label>Biaya</label>

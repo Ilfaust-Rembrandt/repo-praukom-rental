@@ -14,29 +14,25 @@ class DashboardController extends Controller
         ];
         return view('dashboard.dashboard', $data);
     }
-public function add(Request $request){
-    $validateData = $request->validate(
-        [
-            'nama'=>'required|varchar|max:250',
-            'merk'=>'required|varchar|max:250|',
-            'jenis'=>'required|varchar|max:250|',
-            'biaya'=>'required|integer|max:250|',
-        ],
-        );
-        mobil::create([
-            'nama'=>$request->nama,
-            'merk'=>$request->merk,
-            'jenis'=>$request->jenis,
-            'biaya'=>$request->biaya
-        ]);
+public function add(){
+    // memanggil view tambah
+    return view('dashboard.addboard');
 }
 public function Save(Request $request, Mobil $mobil){
     $data = $request->validate([
         'nama' => ['required'],
         'merk' => ['required'],
         'jenis' => ['required'],
+        'kondisi'=>['required'],
         'biaya' => ['required']
 
+    ]);
+    mobil::create([
+        'nama'=>$request->nama,
+        'merk'=>$request->merk,
+        'jenis'=>$request->jenis,
+        'kondisi'=>$request->kondisi,
+        'biaya'=>$request->biaya
     ]);
 
     if($data):
