@@ -23,7 +23,7 @@ Route::prefix('login')->group(function(){
 });
 
 Route::get('selection', [SelectionController::class, 'SelectionPage'])
-->name('selection.page')->middleware(['Access:user,admin']);
+->name('selection.page');
 Route::middleware(['auth'])
     ->group(function () {
     Route::prefix('dashboard')->group(function(){

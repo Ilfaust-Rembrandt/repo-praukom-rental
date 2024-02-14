@@ -54,13 +54,20 @@
       </div>
     </div>
   </div>
-  <button class="carousel-control-prev mt-auto my-auto mx-auto mb-auto" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+  <button class="carousel-control-prev mt-auto my-20 mx-auto mb-auto bg-primary" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+  <button class="carousel-control-next bg-primary" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+</div>
+@endsection
+@section('footer')
+<div style="width: 150%; height: 100%; position: relative">
+    <div style="width: 100%; height: 200px; left: 0px; position: fixed; background: #EEF214; top:auto; bottom:0;"></div>
+    <img style="width: auto; height: auto; left: 62%; position: fixed; top:72%;" src="{{ asset('img/orange2.png') }}" />
+    <div style="width: 488px; height: 18%; left: 15%; position: fixed; top:auto; bottom:0;color: black; font-size: 36px; font-family: Sans-serif; font-weight: 500; word-wrap: break-word">Hubungi sekarang dan pesan mobil yang ingin anda sewa</div>
 </div>
 @endsection

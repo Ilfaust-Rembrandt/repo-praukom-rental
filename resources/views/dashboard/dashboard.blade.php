@@ -14,7 +14,7 @@
                     <div class="col-md-auto">
                         <a href="dashboard/addboard">
                             <br>
-                            <btn class="btn btn-success">Tambah Data Mobil</btn>
+                            <button class="btn btn-success" type="submit">Tambah Data Mobil</button>
                         </a>
 
                     </div>
