@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\KondisiController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SelectionController;
 use App\Http\Middleware\Access;
@@ -30,6 +31,9 @@ Route::middleware(['auth'])
         Route::get('/', [DashboardController::class, 'AdminBoard'])->name('adminboard');
         Route::get('/addboard', [DashboardController::class, 'add'])->name('adminadd');
         Route::post('/save',[DashboardController::class, 'save'])->name('adminsave');
+    });
+    Route::prefix('kondisi')->group(function(){
+        Route::get('/', [KondisiController::class, 'jenis'])->name('jenis');
     });    
 });
 
