@@ -18,22 +18,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('login')->group(function(){
-    Route::get('/', [LoginController::class, 'LoginForm'])->name('login');
-    Route::post('/', [LoginController::class, 'register'])->name('register');
-});
+Route::get('/login', [LoginController::class, 'LoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'register'])->name('register');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('selection', [SelectionController::class, 'SelectionPage'])
-->name('selection.page');
+Route::get('/', [SelectionController::class, 'SelectionPage'])->name('selection.page');
+
 Route::middleware(['auth'])
     ->group(function () {
     Route::prefix('dashboard')->group(function(){
         Route::get('/', [DashboardController::class, 'AdminBoard'])->name('adminboard');
-        Route::get('/addboard', [DashboardController::class, 'add'])->name('adminadd');
-        Route::post('/save',[DashboardController::class, 'save'])->name('adminsave');
-    });
-    Route::prefix('kondisi')->group(function(){
-        Route::get('/', [KondisiController::class, 'jenis'])->name('jenis');
+        Route::get('/addboard', [DashboardController::class, 'Add'])->name('adminadd');
+        Route::post('/save',[DashboardController::class, 'Save'])->name('adminsave');
+        Route::get('/edit/{id}',[DashboardController::class, 'Edit'])->name('adminedit');
+        Route::post('/edit/save',[DashboardController::class, 'Update'])->name('adminupdate');
+        Route::delete('/hapus',[DashboardController::class, 'Delete'])->name('admindelete');
     });    
 });
 

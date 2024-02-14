@@ -9,6 +9,6 @@ class kondisi extends Model
 {
     use HasFactory;
     protected $table = 'kondisi';
-    protected $fillable = ['id_servis','jenis_kondisi'];
     protected $primaryKey = 'id_kondisi';
+    protected $fillable = ['jenis_kondisi'];
 }
