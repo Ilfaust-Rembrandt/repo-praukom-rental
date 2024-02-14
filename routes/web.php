@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SelectionController;
+use App\Http\Middleware\Access;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,15 +17,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [LoginController::class, 'LoginForm'])
-->name('login.form');
+Route::prefix('login')->group(function(){
+    Route::get('/', [LoginController::class, 'LoginForm'])->name('login');
+    Route::post('/', [LoginController::class, 'register'])->name('register');
+});
 
-Route::get('/selection', [SelectionController::class, 'SelectionPage'])
-->name('selection.page');
-Route::prefix('dashboard')->group(function(){
-    Route::get('/', [DashboardController::class, 'AdminBoard'])->name('adminboard');
-    Route::get('/addboard', [DashboardController::class, 'add'])->name('adminadd');
-    Route::post('/save',[DashboardController::class, 'save'])->name('adminsave');
+Route::get('selection', [SelectionController::class, 'SelectionPage'])
+->name('selection.page')->middleware(['Access:user,admin']);
+Route::middleware(['auth'])
+    ->group(function () {
+    Route::prefix('dashboard')->group(function(){
+        Route::get('/', [DashboardController::class, 'AdminBoard'])->name('adminboard');
+        Route::get('/addboard', [DashboardController::class, 'add'])->name('adminadd');
+        Route::post('/save',[DashboardController::class, 'save'])->name('adminsave');
+    });    
 });
 
 

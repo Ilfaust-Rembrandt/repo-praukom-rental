@@ -1,46 +1,66 @@
 @extends('selection.layout')
 @section('title', 'Selection')
 @section('header')
-    <nav style="background-color: #333; padding: 10px;">
-    <div style="margin: 0 auto; max-width: 960px;">
-        <a href="#" style="color: #fff; text-decoration: none; margin-right: 10px;">Home</a>
-        <a href="#" style="color: #fff; text-decoration: none; margin-right: 10px;">Seleksi</a>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <img src="{{ asset('img/Vector.png') }}" alt="logo">
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
     </div>
-    </nav>
-
-    <h1 style="color: red;">Skyline</h1>
-    <h1 style="display: inline; color: black;">Wheels</h1>
+  </div>
+</nav>
 @endsection
 @section('content')
-<div style="display: flex; flex-wrap: wrap; gap: 1rem;">
-  <div style="flex: 1 1 300px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 1rem;">
-    <img src="https://example.com/images/lamborghini.jpg" alt="Lamborghini" style="width: 100%;">
-    <h2 style="margin-top: 0;">Lamborghini</h2>
-    <p>Rp 15.000.000</p>
-    <p><strong>Rp15.000.000</strong> Full Day</p>
-    <p>Bahan Bakar: Pertamax Turbo</p>
-    <p>Jumlah Kursi: 2</p>
-    <p>Transmisi: Matic</p>
-    <button style="background-color: blue; color: white; padding: 0.5rem 1rem; border: none; border-radius: 0.25rem;">Sewa</button>
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators mt-auto my-auto mx-auto mb-auto">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <div style="flex: 1 1 300px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 1rem;">
-    <img src="{}" alt="">
-    <h2 style="margin-top: 0;">Ferarri</h2>
-    <p>Rp 14.500.000</p>
-    <p><strong>Rp14.500.000</strong> Full Day</p>
-    <p>Bahan Bakar: Pertamax Turbo</p>
-    <p>Jumlah Kursi: 2</p>
-    <p>Transmisi: Manual</p>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{ asset('img/red.png') }}" class="d-block w-50 mt-auto my-auto mx-auto rounded" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Lamborghini</h5>
+        <p>$1.500.000</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{{ asset('img/orange.png') }}" class="d-block w-50 mt-auto my-auto mx-auto rounded" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Mclaren</h5>
+        <p>$1.000.000</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{{ asset('img/green.png') }}" class="d-block w-50 mt-auto my-auto mx-auto rounded" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Ferrari</h5>
+        <p>$1.700.000</p>
+      </div>
+    </div>
   </div>
-  <div style="flex: 1 1 300px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 1rem;">
-    <img src="https://example.com/images/mclaren.jpg" alt="Mclaren" style="width: 100%;">
-    <h2 style="margin-top: 0;">Mclaren</h2>
-    <p>Rp 26.000.000</p>
-    <p><strong>Rp26.000.000</strong> Full Day</p>
-    <p>Bahan Bakar: Bensin</p>
-    <p>Jumlah Kursi: 2</p>
-    <p>Transmisi: Matic</p>
-    <button style="background-color: blue; color: white; padding: 0.5rem 1rem; border: none; border-radius: 0.25rem;">Sewa</button>
-  </div>
+  <button class="carousel-control-prev mt-auto my-auto mx-auto mb-auto" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
 @endsection

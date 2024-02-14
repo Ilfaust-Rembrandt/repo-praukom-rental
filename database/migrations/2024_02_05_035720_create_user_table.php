@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('user', function (Blueprint $table) {
             $table->integer('id_user', true)->autoIncrement();
             $table->string('username');
-            $table->integer('level');
             $table->string('password');
         });
     }

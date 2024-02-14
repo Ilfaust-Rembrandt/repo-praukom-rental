@@ -14,7 +14,7 @@
                 <form method="POST" action="save">
                     <div class="row">
                     <div class="col-md-4">
-                            <button type="submit" class="btn btn-success">Simpan</button>
+                            <button type="submit" class="btn btn-success" >Simpan</button>
                         </div>
                             <p>
                             <hr>
@@ -32,21 +32,30 @@
                                 <label>Jenis Mobil</label>
                                 <input type="text" class="form-control" name="jenis" />
                             </div>
-                            <div class="form-group">
-                                <label>Kondisi</label>
-                                @foreach ($jenis_kondisi as $item)
-                                    <option value="" disabled hidden selected>Select Kondisi</option>
-                                    <option value="{{$item->id_kondisi}}">
-                                        {{$item->id_kondisi}}
-                                    </option>
-                                @endforeach
+                            <div class="form-group form-control">
+                                <label>Id Kondisi</label>
+                                <select name="jenis_kondisi" id="jenis_kondisi">
+                                    <option value="Rusak">Rusak</option>
+                                    <option value="Aman">Aman</option>
+                                    <option value="Bengkel">Bengkel</option>
+                                </select>
+                                <input type="text" class="form-control" name="jenis" />
                             </div>
                             <div class="form-group">
                                 <label>Biaya</label>
                                 <input type="int" class="form-control" name="biaya" />
                                 @csrf
                             </div>
-                        </div>
+                        </div><strong>DATABASE CONNECTED: </strong>
+<?php
+    use Illuminate\Support\Facades\DB;
+    try {
+        DB::connection()->getPDO();
+        echo DB::connection()->getDatabaseName();
+    } catch (\Exception $e) {
+        echo 'none';
+    }
+    ?>
                         
                     </div>
                 </form>

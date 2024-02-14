@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-success">Login</button>
+                        <button class="btn btn-success">Sign Up</button>
                     </div>
                 </div>
             </div>
