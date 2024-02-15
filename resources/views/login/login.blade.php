@@ -7,6 +7,7 @@
                 <form action="{{route('register')}}" method="post" class="needs-validation">
                 <div class="card">
                 <form method="post" action="/" class="card">
+                <form method="post" action="/" class="card">
                     <div class="card-header">
                         <h1>Login</h1>
                     </div>
@@ -14,10 +15,12 @@
                         <div class="form-group">
                             <label>Username</label>
                             <input type="text" class="form-control" name="username" placeholder="username">
+                            <input type="text" class="form-control" name="username" placeholder="Username">
                         </div>
                         <div class="form-group">
                             <label>Password</label>
                             <input type="password" class="form-control" name="password" placeholder="Password">
+                            @csrf
                         </div>
                     </div>
                     @csrf
@@ -25,7 +28,6 @@
                         <button class="btn btn-success" type="submit">Login</button>
                     </div>
                 </div>
-
                 </form>
             </div>
         </div>
