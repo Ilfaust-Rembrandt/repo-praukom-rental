@@ -13,20 +13,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('kondisi', function (Blueprint $table) {
-            $table->integer('id_kondisi', true)->autoIncrement();
-            $table->integer('id_servis');
+            $table->integer('id_kondisi', true);
             $table->string('jenis_kondisi');
-
         });
-        Schema::table('kondisi', function($table){
-            $table->foreign('id_servis')->on('servis')
-            ->references('id_servis')->onDelete('cascade')->onUpdate('cascade');
-        });
-        DB::table('jenis_kondisi')->insert([
-            ['jenis_kondisi'=>'Rusak'],
-            ['jenis_kondisi'=>'Aman'],
-            ['jenis_kondisi'=>'Bengkel']
-        ]);
     }
 
     /**

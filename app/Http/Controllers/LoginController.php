@@ -24,15 +24,14 @@ class LoginController extends Controller
             [
                 'username'=>'required|string|max:250',
                 'password'=>'required|string|max:250|unique:users',
-            ],
-            );
-            user::create([
-                'username'=>$request->username,
-                'password'=>Hash::make($request->password)
             ]);
+            // user::create([
+            //     'username'=>$request->username,
+            //     'password'=>Hash::make($request->password)
+            // ]);
 
-            $credentials = $request->only('username', 'password');
-            Auth::attempt($credentials);
+            // $credentials = $request->only('username', 'password');
+            Auth::attempt($validateData);
             $request->session()->regenerate();
             return redirect()->route('adminboard')
             ->withSuccess('Logged In');
@@ -56,18 +55,17 @@ class LoginController extends Controller
             $credentials = $request->only('username', 'password');
             Auth::attempt($credentials);
             $request->session()->regenerate();
-            return redirect()->route('dashboard')
+            return redirect()->route('adminboard')
             ->withSuccess('Logged In');
-        
-    
         } 
+
+        public function logout()
+        {
+            Auth::logout();
+            Session::regenerateToken();
+            return redirect('/');
+        }
     }
 
-    function logout()
-    {
-        Auth::logout();
-        Session::regenerateToken();
-        return redirect('/');
 
-    }
 

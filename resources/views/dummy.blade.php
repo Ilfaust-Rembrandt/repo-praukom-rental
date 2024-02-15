@@ -1,6 +1,3 @@
-
-
-
 <strong>DATABASE CONNECTED: </strong>
 <?php
     use Illuminate\Support\Facades\DB;

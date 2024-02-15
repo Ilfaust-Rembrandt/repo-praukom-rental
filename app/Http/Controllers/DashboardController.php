@@ -2,61 +2,80 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\kondisi;
 use App\Models\mobil;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
     
-    public function AdminBoard(Mobil $mobil){
+    public function AdminBoard(Mobil $mobil, Kondisi $kondisi){
         $data = [
-            'mobil' => $mobil->all()
+            'mobil' => $mobil->all(),
+            'kondisi' => $kondisi->all()
         ];
         return view('dashboard.dashboard', $data);
     }
-public function add(Request $request){
-    // memanggil view tambah
-    
-    return view('dashboard.addboard');
-}
-public function save(Request $request, Mobil $mobil){
-    $data = $request->validate([
-        'nama' => ['required'],
-        'merk' => ['required'],
-        'jenis' => ['required'],
-        'kondisi'=>['required'],
-        'biaya' => ['required']
-
-    ]);
-    if($request->input('id_mobil') !== null){
-        $dataUpdate = mobil::where('id_mobil', $request->input('id_mobil'))
-        ->update();
-        if($dataUpdate){
-            return redirect('dashboard')->with('Success');  
-        }
-        else{
-            return back()->with('Error');
-        }
+    public function Add(kondisi $kondisi){
+        $data = [
+            'kondisi' => $kondisi->all()
+        ];
+        return view('dashboard.addboard', $data);
     }
-    else{
-        if($data):
-            $data['id_servis'] = 1;
-        //Save if all data filled
-        mobil::create([
-            'nama'=>$request->nama,
-            'merk'=>$request->merk,
-            'jenis'=>$request->jenis,
-            'kondisi'=>$request->kondisi,
-            'biaya'=>$request->biaya,
-            
+    public function Save(Request $request, Mobil $mobil){
+        $data = $request->validate([
+            'nama' => 'required',
+            'merk' => 'required',
+            'jenis' => 'required',
+            'id_kondisi'=>'required',
+            'biaya' => 'required'
         ]);
-        
-    endif;
+        if($data):
+            $mobil->create($data);
+            return redirect('/dashboard');
+        else:
+            return redirect('/dashboard/addboard');
+        endif;
     }
-    return redirect()->route('dashboard.dashboard');
-    
-}
-public function delete(){
 
-}
+    public function Edit(Request $request, mobil $mobil, kondisi $kondisi){
+        $data = [
+            'mobil' => $mobil->where('id_mobil', $request->id)->first(),
+            'kondisi' => $kondisi->all()
+        ];
+        return view('dashboard.editboard', $data);
+    }
+
+    public function Update(Request $request, mobil $mobil){
+        $data = $request->validate([
+            'nama' => 'sometimes',
+            'merk' => 'sometimes',
+            'jenis' => 'sometimes',
+            'id_kondisi'=>'sometimes',
+            'biaya' => 'sometimes'
+        ]);
+        // dd();
+        if($data){
+            $mobil->where('id_mobil', $request->id_mobil)->update($data);
+            return redirect('/dashboard');
+        }else{
+            return back()->with('error', 'Data mobil diupdate');
+        }
+    }
+    public function Delete(Request $request, mobil $mobil){
+        $id_mobil = $request->id_mobil;
+        if($mobil->where('id_mobil', $id_mobil)->delete()){
+            $pesan = [
+                'success' => true,
+                'pesan' => 'Data berhasil dihapus'
+            ];
+        }else
+        {
+            $pesan = [
+                'success' => false,
+                'pesan' => 'Data gagal dihapus'
+            ];
+        }
+        return response()->json($pesan);
+    }
 }

@@ -1,4 +1,4 @@
-@extends('dashboard.layout')
+@extends('servis.layout')
 @section('title', 'Admin Board')
 @section('content')
 <div class="row d-flex justify-content-center">
@@ -6,7 +6,7 @@
         <div class="card">
             <div class="card-header">
                 <span class="h1">
-                    Tambah data Mobil
+                    Tambah data Servis
                 </span>
             </div>
             <div class="card-body">
@@ -21,30 +21,37 @@
                     </div> 
                         <div class="col-md-5">
                         <div class="form-group">
-                                <label>Nama Mobil</label>
+                                <label>Tanggal Servis</label>
+                                <input type="text" class="form-control" name="tanggal" />
+                            </div>
+                            <div class="form-group">
+                                <label>Nama Parts</label>
                                 <input type="text" class="form-control" name="nama" />
                             </div>
                             <div class="form-group">
-                                <label>Merk Mobil</label>
-                                <input type="text" class="form-control" name="merk" />
-                            </div>
-                            <div class="form-group">
-                                <label>Jenis Mobil</label>
-                                <input type="text" class="form-control" name="jenis" />
+                                <label>No Parts Ganti</label>
+                                <input type="text" class="form-control" name="ganti" />
                             </div>
                             <div class="form-group form-control">
-                                <label>Kondisi</label>
-                                <select name="id_kondisi" id="id_kondisi">
-                                    @foreach ($kondisi as $k)
-                                        <option value="{{ $k->id_kondisi }}">{{ $k->jenis_kondisi }}</option>
-                                    @endforeach
-                                </select>
+                                <label>Id Parts</label>
+                                <input type="text" class="form-control" name="parts">
                             </div>
                             <div class="form-group">
                                 <label>Biaya</label>
-                                <input type="number" class="form-control" name="biaya" />
+                                <input type="int" class="form-control" name="biaya" />
                                 @csrf
-                            </div>                        
+                            </div>
+                        </div><strong>DATABASE CONNECTED: </strong>
+<?php
+    use Illuminate\Support\Facades\DB;
+    try {
+        DB::connection()->getPDO();
+        echo DB::connection()->getDatabaseName();
+    } catch (\Exception $e) {
+        echo 'none';
+    }
+    ?>
+                        
                     </div>
                 </form>
             </div>

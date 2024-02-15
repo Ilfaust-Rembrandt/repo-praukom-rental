@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
-    @vite(['resources/js/app', 'resources/css/app.css'])
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    @vite(['resources/js/app.js', 'resources/css/app.css'])
 </head>
 <body>
 <div class="container-fluid">
@@ -73,6 +72,7 @@
                     </li>
                 </ul>
                 <hr>
+                {{-- <div class="dropdown"> --}}
                 <div class="dropdown pb-4">
                     <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
@@ -88,6 +88,7 @@
                         <li><a class="dropdown-item" href="#">Sign out</a></li>
                     </ul>
                 </div>
+                {{-- </div> --}}
             </div>
         </div>
         <div class="col py-3">
