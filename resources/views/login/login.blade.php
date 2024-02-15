@@ -7,7 +7,6 @@
                 <form action="{{route('proses')}}" method="post" class="needs-validation">
                 <div class="card">
                 <form method="post" action="/" class="card">
-                <form method="post" action="/" class="card">
                     <div class="card-header">
                         <h1>Login</h1>
                     </div>

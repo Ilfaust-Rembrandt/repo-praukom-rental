@@ -22,14 +22,12 @@ class LoginController extends Controller
             $validateData = $request->validate(
             [   
                 $credentials = $request->validate([
-                    'email'=>'required|email|unique:users',
                     'username'=>'required',
                     'password'=>'required'
                 ])
             ]
             );
             user::create([
-                'email'=>$request->email,
                 'name'=>$request->username,
                 'password'=>Hash::make($request->password)
             ]);
@@ -42,10 +40,19 @@ class LoginController extends Controller
             [   
                 $credentials = $request->validate([
                     'username'=>'required',
+                    'email'=>'required',
                     'password'=>'required'
                 ])
-            ],
-        );
+            ],);
+            user::create([
+                'name'=>$request->username,
+                'password'=>Hash::make($request->password)
+            ]);
+            $credentials = $request->only('username', 'password');
+            Auth::attempt($credentials);
+                $request->session()->regenerate();
+                return redirect()->route('adminboard')
+                ->withSuccess('Logged In');
         } 
         public function proses(Request $request){
             $validateData = $request->validate(

@@ -12,12 +12,12 @@
                     </div>
                    <div class="card-body">
                         <div class="form-group">
-                            <label>Email</label>
-                            <input type="text" class="form-control" name="email" placeholder="email@gmail.com">
-                        </div>
-                        <div class="form-group">
                             <label>Username</label>
                             <input type="text" class="form-control" name="username" placeholder="username">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="text" class="form-control" name="email" placeholder="email@gmail.com">
                         </div>
                         <div class="form-group">
                             <label>Password</label>

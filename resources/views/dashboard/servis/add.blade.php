@@ -1,4 +1,4 @@
-@extends('servis.layout')
+@extends('dashboard.layout')
 @section('title', 'Admin Board')
 @section('content')
 <div class="row d-flex justify-content-center">
@@ -28,6 +28,14 @@
                                 <label>Nama Parts</label>
                                 <input type="text" class="form-control" name="nama" />
                             </div>
+                            <div class="form-group form-control">
+                                <label>Kondisi</label>
+                                <select name="id_kondisi" id="id_kondisi">
+                                    @foreach ($kondisi as $k)
+                                        <option value="{{ $k->id_kondisi }}">{{ $k->jenis_kondisi }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                             <div class="form-group">
                                 <label>No Parts Ganti</label>
                                 <input type="text" class="form-control" name="ganti" />
@@ -36,11 +44,7 @@
                                 <label>Id Parts</label>
                                 <input type="text" class="form-control" name="parts">
                             </div>
-                            <div class="form-group">
-                                <label>Biaya</label>
-                                <input type="int" class="form-control" name="biaya" />
-                                @csrf
-                            </div>
+                            
                         </div><strong>DATABASE CONNECTED: </strong>
 <?php
     use Illuminate\Support\Facades\DB;

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\kondisi;
 use App\Models\mobil;
+use App\Models\servis;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -15,6 +16,15 @@ class DashboardController extends Controller
             'kondisi' => $kondisi->all()
         ];
         return view('dashboard.dashboard', $data);
+    }
+    public function ServisBoard(Request $request){
+        return view('dashboard.servis.servis');
+    }
+    public function Addvis(servis $servis){
+        $data = [ 
+            'servis' => $servis->all()
+        ];
+        return view ('dashboard.servis.add', $data);
     }
     public function Add(kondisi $kondisi){
         $data = [

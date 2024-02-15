@@ -35,6 +35,8 @@ Route::middleware(['auth'])
         Route::get('/edit/{id}',[DashboardController::class, 'Edit'])->name('adminedit');
         Route::post('/edit/save',[DashboardController::class, 'Update'])->name('adminupdate');
         Route::delete('/hapus',[DashboardController::class, 'Delete'])->name('admindelete');
+        Route::get('/servis', [DashboardController::class, 'ServisBoard'])->name('servis');
+        Route::get('/add', [DashboardController::class, 'Addvis'])->name('addvis');
     });    
 });
 

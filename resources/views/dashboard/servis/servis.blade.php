@@ -1,5 +1,5 @@
-@extends('servis.layout')
-@section('title','Daftar Servis Mobil')
+@extends('dashboard.layout')
+@section('title','Daftar Mobil')
 @section('content')
 <div class="row">
     <div class="col-md-auto mx-auto">
@@ -14,38 +14,32 @@
                     <div class="col-md-auto">
                         <a href="dashboard/addboard">
                             <br>
-                            <button class="btn btn-success" type="button">Tambah Data Mobil</button>
+                            <button class="btn btn-success" type="button">Tambah Data Servis</button>
                         </a>
                     </div>
                     <p>
                         <hr>
                         <table class="table table-hover table-bordered DataTable">
                                 <tr>
-                                    <th>NAMA MOBIL</th>
-                                    <th>MERK MOBIL</th>
-                                    <th>JENIS MOBIL</th>
-                                    <th>KONDISI</th>
-                                    <th>BIAYA</th>
+                                    <th>TANGGAL SERVIS</th>
+                                    <th>NO PARTS</th>
+                                    <th>NO PARTS GANTI</th>
+                                    <th>ID PARTS</th>
                                     <th>AKSI</th>
                                 </tr>
                             <tbody>
-                            @foreach($mobil as $m)
+                            @foreach($servis as $s)
                                     <tr>
-                                        <td>{{$m->nama}}</td>
-                                        <td>{{$m->merk}}</td>
-                                        <td>{{$m->jenis}}</td>
-                                        @foreach ($kondisi as $k)
-                                            @if ($k->id_kondisi == $m->id_kondisi)                                                                                        
-                                                <td>{{$k->jenis_kondisi}}</td>
-                                            @endif
-                                        @endforeach
-                                        <td>{{$m->biaya}}</td>
+                                        <td>{{$s->tgl_servis}}</td>
+                                        <td>{{$s->no_parts}}</td>
+                                        <td>{{$s->no_parts_ganti}}</td>
+                                        <td>{{$s->id_parts}}</td>
                                         <td>
-                                            <a href="dashboard/edit/{{$m->id_mobil}}">
+                                            <a href="dashboard/edit/{{$s->id_servis}}">
                                                 <button class="btn btn-primary">EDIT</button>
                                             </a>
 
-                                            <button class="btn btn-danger btnHapus" idHapus="{{ $m->id_mobil }}">HAPUS</button>
+                                            <button class="btn btn-danger btnHapus" idHapus="{{ $s->id_servis }}">HAPUS</button>
                                         </td>
                                     </tr>
                                 @endforeach

@@ -22,12 +22,12 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                        <a href="{{route('adminboard')}}" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                             <i class="fa-solid fa-gauge"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Servis</span></a>
+                        <a href="{{route('servis')}}" class="nav-link px-0 align-middle">
+                            <i class="fa-solid fa-car"></i> <span class="ms-1 d-none d-sm-inline">Servis</span></a>
                     </li>
                     <li>
                         <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
