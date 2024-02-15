@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-lg-4">
-                <form action="{{route('register')}}" method="post" class="needs-validation">
+                <form action="{{route('proses')}}" method="post" class="needs-validation">
                 <div class="card">
                 <form method="post" action="/" class="card">
                 <form method="post" action="/" class="card">
@@ -15,7 +15,6 @@
                         <div class="form-group">
                             <label>Username</label>
                             <input type="text" class="form-control" name="username" placeholder="username">
-                            <input type="text" class="form-control" name="username" placeholder="Username">
                         </div>
                         <div class="form-group">
                             <label>Password</label>
@@ -32,18 +31,4 @@
             </div>
         </div>
     </div>
-    
-
-
-<strong>DATABASE CONNECTED: </strong>
-<?php
-    use Illuminate\Support\Facades\DB;
-    try {
-        DB::connection()->getPDO();
-        echo DB::connection()->getDatabaseName();
-    } catch (\Exception $e) {
-        echo 'none';
-    }
-
-?>
 @endsection

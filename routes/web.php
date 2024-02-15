@@ -19,8 +19,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/login', [LoginController::class, 'LoginForm'])->name('login');
-Route::post('/login', [LoginController::class, 'register'])->name('register');
+Route::post('/login', [LoginController::class, 'proses'])->name('proses');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::post('/register', [LoginController::class, 'register'])->name('prosreg');
+Route::get('/register', [LoginController::class, 'RegisForm'])->name('register');
 
 Route::get('/', [SelectionController::class, 'SelectionPage'])->name('selection.page');
 
