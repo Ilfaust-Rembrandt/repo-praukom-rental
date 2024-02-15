@@ -23,12 +23,14 @@ class LoginController extends Controller
             [   
                 $credentials = $request->validate([
                     'username'=>'required',
+                    'email'=>'required',
                     'password'=>'required'
                 ])
             ]
             );
             user::create([
-                'name'=>$request->username,
+                'username'=>$request->username,
+                'email'=>$request->email,
                 'password'=>Hash::make($request->password)
             ]);
 
@@ -45,7 +47,8 @@ class LoginController extends Controller
                 ])
             ],);
             user::create([
-                'name'=>$request->username,
+                'username'=>$request->username,
+                'email'=>$request->email,
                 'password'=>Hash::make($request->password)
             ]);
             $credentials = $request->only('username', 'password');

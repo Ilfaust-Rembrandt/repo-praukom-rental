@@ -9,7 +9,7 @@ class login extends Authenticatable
 {
     use HasFactory;
     protected $table = 'user';
-    protected $fillable = ['username', 'password', 'role'];
     protected $primaryKey = 'id_user';
+    protected $fillable = ['username', 'password', 'role'];
     public $timestamps = false;
 }

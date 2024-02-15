@@ -26,7 +26,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Foto Mobil</label>
-                                <input type="file" class="form-control" name="foto" />
+                                <input type="file" class="form-control" name="foto" value="{{$mobil->foto}}" />
                             </div>
                             <div class="form-group">
                                 <label>Merk Mobil</label>

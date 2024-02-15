@@ -17,14 +17,29 @@ class DashboardController extends Controller
         ];
         return view('dashboard.dashboard', $data);
     }
-    public function ServisBoard(Request $request){
-        return view('dashboard.servis.servis');
-    }
-    public function Addvis(servis $servis){
+    public function ServisBoard(servis $servis, kondisi $kondisi){
         $data = [ 
-            'servis' => $servis->all()
+            'servis' => $servis->all(),
+            'kondisi'=>  $kondisi->all()
         ];
-        return view ('dashboard.servis.add', $data);
+        return view('dashboard.servis.servis', $data);
+    }
+    public function Addvis(Request $request, Servis $servis){
+        $data= $request->validate(
+            [
+                'id_kondisi'=>'required',
+                'no_parts'=>'required',
+                'tgl_servis'=>'required',
+                'id_parts'=>'required',
+                'no_parts_ganti'=>'required'
+            ],
+            );
+        if($data):
+            $servis->create($data);
+            return redirect('/servis');
+        else:
+            return redirect ('/servis/add');
+        endif;
     }
     public function Add(kondisi $kondisi){
         $data = [
@@ -47,14 +62,6 @@ class DashboardController extends Controller
         else:
             return redirect('/dashboard/addboard');
         endif;
-        if ($request->hasFile('foto_mobil') && $request->file('foto_mobil')->isValid()) {
-            $foto_file = $request->file('foto_mobil');
-            $foto_nama = md5($foto_file->getClientOriginalName() . time()) . '.' . $foto_file->getClientOriginalExtension();
-            $foto_file->move(public_path('mobil'), $foto_nama);
-            $data['foto_siswa'] = $foto_nama;
-        } else {
-            return back()->with('error', 'Data pengurus kelas gagal ditambahkan');
-        }
     }
 
     public function Edit(Request $request, mobil $mobil, kondisi $kondisi){

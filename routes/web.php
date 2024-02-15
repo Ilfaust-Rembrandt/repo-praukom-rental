@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KondisiController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SelectionController;
+use App\Http\Controllers\ServisController;
 use App\Http\Middleware\Access;
 use Illuminate\Support\Facades\Route;
 
@@ -35,7 +36,7 @@ Route::middleware(['auth'])
         Route::get('/edit/{id}',[DashboardController::class, 'Edit'])->name('adminedit');
         Route::post('/edit/save',[DashboardController::class, 'Update'])->name('adminupdate');
         Route::delete('/hapus',[DashboardController::class, 'Delete'])->name('admindelete');
-        Route::get('/servis', [DashboardController::class, 'ServisBoard'])->name('servis');
+        Route::get('/servis', [DashboardController::class, 'ServisBoard'])->name('servisboard');
         Route::get('/add', [DashboardController::class, 'Addvis'])->name('addvis');
     });    
 });

@@ -6,13 +6,13 @@
         <div class="card">
             <div class="card-header">
                 <span class="h1">
-                    Data Mobil
+                    Data Servis
                 </span>
             </div>
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-auto">
-                        <a href="dashboard/addboard">
+                        <a href="{{route('addvis')}}">
                             <br>
                             <button class="btn btn-success" type="button">Tambah Data Servis</button>
                         </a>
@@ -28,21 +28,24 @@
                                     <th>AKSI</th>
                                 </tr>
                             <tbody>
-                            @foreach($servis as $s)
-                                    <tr>
-                                        <td>{{$s->tgl_servis}}</td>
-                                        <td>{{$s->no_parts}}</td>
-                                        <td>{{$s->no_parts_ganti}}</td>
-                                        <td>{{$s->id_parts}}</td>
+                                @foreach($servis as $s)
+                                        <td>{{$s->tgl}}</td>
+                                        <td>{{$s->no}}</td>
+                                        <td>{{$s->jenis}}</td>
+                                        @foreach ($kondisi as $k)
+                                            @if ($k->id_kondisi == $s->id_kondisi)                                                                                        
+                                                <td>{{$k->jenis_kondisi}}</td>
+                                            @endif
+                                        @endforeach
+
                                         <td>
-                                            <a href="dashboard/edit/{{$s->id_servis}}">
+                                            <a href="dashboard/edit/{{$s->id_mobil}}">
                                                 <button class="btn btn-primary">EDIT</button>
                                             </a>
 
-                                            <button class="btn btn-danger btnHapus" idHapus="{{ $s->id_servis }}">HAPUS</button>
+                                            <button class="btn btn-danger btnHapus" idHapus="{{ $s->id_mobil }}">HAPUS</button>
                                         </td>
-                                    </tr>
-                            @endforeach
+                                @endforeach
                             </tbody>
                         </table>
                 </div>

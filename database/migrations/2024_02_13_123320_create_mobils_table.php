@@ -16,10 +16,10 @@ return new class extends Migration
             $table->id('id_mobil');
             $table->integer('id_kondisi');
             $table->string('nama');
+            $table->text('foto');
             $table->string('merk');
             $table->string('jenis');
             $table->integer('biaya');
-            $table->text('foto');
             $table->index('id_kondisi')->default(1);
         });
         Schema::table('mobils', function($table){

@@ -9,7 +9,6 @@ class servis extends Model
 {
     use HasFactory;
     protected $table = 'servis';
-    protected $fillable = ['id_kondisi', 'no_parts', 'id_parts','tgl_servis', 'no_parts_ganti'];
     protected $primaryKey = 'id_servis';
-    public $timestamps = false;
+    protected $fillable = ['id_kondisi', 'no_parts', 'id_parts','tgl_servis', 'no_parts_ganti'];
 }

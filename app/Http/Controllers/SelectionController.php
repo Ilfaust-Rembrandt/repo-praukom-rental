@@ -9,4 +9,7 @@ class SelectionController extends Controller
     public function SelectionPage(){
         return view('selection.selection');
     }
+    public function Lambo(){
+        return view('selection.lambo');
+    }
 }

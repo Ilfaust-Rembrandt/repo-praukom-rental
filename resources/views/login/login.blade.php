@@ -22,11 +22,16 @@
                         </div>
                     </div>
                     @csrf
-                    <div class="card-footer">
+                    <div class="card-footer d-flex justify-content-between">
                         <button class="btn btn-success" type="submit">Login</button>
                     </div>
+                    </form>
+                    <div class="card-footer">
+                    <form action="{{route('register')}}">
+                        <button class="btn btn-success" type="submit">Register</button>
+                    </form>
+                    </div>
                 </div>
-                </form>
             </div>
         </div>
     </div>

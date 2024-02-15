@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="{{route('selection.page')}}">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Features</a>
@@ -33,25 +33,30 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
+      <a href="#">
       <img src="{{ asset('img/red.png') }}" class="d-block w-50 mt-auto my-auto mx-auto rounded" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Lamborghini</h5>
         <p>$1.500.000</p>
       </div>
+      </a>
     </div>
     <div class="carousel-item">
-      <img src="{{ asset('img/orange.png') }}" class="d-block w-50 mt-auto my-auto mx-auto rounded" alt="...">
+      <a href="#">
+        <img src="{{ asset('img/orange.png') }}" class="d-block w-50 mt-auto my-auto mx-auto rounded" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Mclaren</h5>
         <p>$1.000.000</p>
-      </div>
+      </div></a>
     </div>
     <div class="carousel-item">
+      <a href="#">
       <img src="{{ asset('img/green.png') }}" class="d-block w-50 mt-auto my-auto mx-auto rounded" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Ferrari</h5>
         <p>$1.700.000</p>
       </div>
+      </a>
     </div>
   </div>
   <button class="carousel-control-prev mt-auto my-20 mx-auto mb-auto bg-primary" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
