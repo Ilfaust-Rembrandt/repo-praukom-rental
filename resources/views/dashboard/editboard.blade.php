@@ -25,6 +25,10 @@
                                 <input type="text" class="form-control" name="nama" value="{{ $mobil->nama }}" />
                             </div>
                             <div class="form-group">
+                                <label>Foto Mobil</label>
+                                <input type="file" class="form-control" name="foto" />
+                            </div>
+                            <div class="form-group">
                                 <label>Merk Mobil</label>
                                 <input type="text" class="form-control" name="merk"  value="{{ $mobil->merk }}" />
                             </div>

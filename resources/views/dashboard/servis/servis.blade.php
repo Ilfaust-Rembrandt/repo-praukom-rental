@@ -42,7 +42,7 @@
                                             <button class="btn btn-danger btnHapus" idHapus="{{ $s->id_servis }}">HAPUS</button>
                                         </td>
                                     </tr>
-                                @endforeach
+                            @endforeach
                             </tbody>
                         </table>
                 </div>

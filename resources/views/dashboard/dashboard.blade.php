@@ -22,6 +22,7 @@
                         <table class="table table-hover table-bordered DataTable">
                                 <tr>
                                     <th>NAMA MOBIL</th>
+                                    <th>FOTO MOBIL</th>
                                     <th>MERK MOBIL</th>
                                     <th>JENIS MOBIL</th>
                                     <th>KONDISI</th>
@@ -32,6 +33,7 @@
                             @foreach($mobil as $m)
                                     <tr>
                                         <td>{{$m->nama}}</td>
+                                        <td>{{$m->foto}}</td>
                                         <td>{{$m->merk}}</td>
                                         <td>{{$m->jenis}}</td>
                                         @foreach ($kondisi as $k)

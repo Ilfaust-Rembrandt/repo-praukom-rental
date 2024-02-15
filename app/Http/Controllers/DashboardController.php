@@ -34,6 +34,7 @@ class DashboardController extends Controller
     }
     public function Save(Request $request, Mobil $mobil){
         $data = $request->validate([
+            'foto'=>'required',
             'nama' => 'required',
             'merk' => 'required',
             'jenis' => 'required',
@@ -46,6 +47,14 @@ class DashboardController extends Controller
         else:
             return redirect('/dashboard/addboard');
         endif;
+        if ($request->hasFile('foto_mobil') && $request->file('foto_mobil')->isValid()) {
+            $foto_file = $request->file('foto_mobil');
+            $foto_nama = md5($foto_file->getClientOriginalName() . time()) . '.' . $foto_file->getClientOriginalExtension();
+            $foto_file->move(public_path('mobil'), $foto_nama);
+            $data['foto_siswa'] = $foto_nama;
+        } else {
+            return back()->with('error', 'Data pengurus kelas gagal ditambahkan');
+        }
     }
 
     public function Edit(Request $request, mobil $mobil, kondisi $kondisi){
@@ -58,6 +67,7 @@ class DashboardController extends Controller
 
     public function Update(Request $request, mobil $mobil){
         $data = $request->validate([
+            'foto'=>'sometimes',
             'nama' => 'sometimes',
             'merk' => 'sometimes',
             'jenis' => 'sometimes',
