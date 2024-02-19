@@ -22,29 +22,33 @@
                         <table class="table table-hover table-bordered DataTable">
                                 <tr>
                                     <th>TANGGAL SERVIS</th>
-                                    <th>NO PARTS</th>
+                                    <th>NAMA PARTS</th>
                                     <th>NO PARTS GANTI</th>
                                     <th>ID PARTS</th>
+                                    <th>KONDISI</th>
                                     <th>AKSI</th>
                                 </tr>
                             <tbody>
                                 @foreach($servis as $s)
-                                        <td>{{$s->tgl}}</td>
-                                        <td>{{$s->no}}</td>
-                                        <td>{{$s->jenis}}</td>
-                                        @foreach ($kondisi as $k)
-                                            @if ($k->id_kondisi == $s->id_kondisi)                                                                                        
-                                                <td>{{$k->jenis_kondisi}}</td>
-                                            @endif
-                                        @endforeach
-
+                                <tr>
+                                    <td>{{$s->tgl_servis}}</td>
+                                    <td>{{$s->nama_parts}}</td>
+                                    <td>{{$s->no_parts_ganti}}</td>
+                                    <td>{{$s->id_parts}}</td>
+                                    @foreach ($kondisi as $k)
+                                    @if ($k->id_kondisi == $s->id_kondisi)                                                                                        
+                                    <td>{{$k->jenis_kondisi}}</td>
+                                    @endif
+                                    @endforeach
+                                    
                                         <td>
-                                            <a href="dashboard/edit/{{$s->id_mobil}}">
+                                            <a href="dashboard/edit/{{$s->id_servis}}">
                                                 <button class="btn btn-primary">EDIT</button>
                                             </a>
 
-                                            <button class="btn btn-danger btnHapus" idHapus="{{ $s->id_mobil }}">HAPUS</button>
+                                            <button class="btn btn-danger btnHapus" idHapus="{{ $s->id_servis }}">HAPUS</button>
                                         </td>
+                                        </tr>
                                 @endforeach
                             </tbody>
                         </table>

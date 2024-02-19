@@ -26,40 +26,20 @@
 @endsection
 @section('content')
 <div id="carouselExampleCaptions" class="carousel slide">
-  <div class="carousel-indicators mt-auto my-auto mx-auto mb-auto">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
   <div class="carousel-inner">
-    <div class="carousel-item active">
+    @foreach ($mobil as $m)
+    <div class="carousel-item {{ $m->id_mobil == 1 ? 'active' : '' }}">
       <a href="#">
-      <img src="{{ asset('img/red.png') }}" class="d-block w-50 mt-auto my-auto mx-auto rounded" alt="...">
+      <img src="http://localhost:8000/img/{{$m->foto}}" class="d-block w-50 h-50 mt-auto my-auto mx-auto rounded" alt="..." style="max-height: 20%">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Lamborghini</h5>
-        <p>$1.500.000</p>
+        <h5>{{ $m->nama }}</h5>
+        <p>Rp {{ $m->biaya }}</p>
       </div>
       </a>
     </div>
-    <div class="carousel-item">
-      <a href="#">
-        <img src="{{ asset('img/orange.png') }}" class="d-block w-50 mt-auto my-auto mx-auto rounded" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Mclaren</h5>
-        <p>$1.000.000</p>
-      </div></a>
-    </div>
-    <div class="carousel-item">
-      <a href="#">
-      <img src="{{ asset('img/green.png') }}" class="d-block w-50 mt-auto my-auto mx-auto rounded" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Ferrari</h5>
-        <p>$1.700.000</p>
-      </div>
-      </a>
-    </div>
+    @endforeach
   </div>
-  <button class="carousel-control-prev mt-auto my-20 mx-auto mb-auto bg-primary" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+  <button class="carousel-control-prev mt-auto my-20 mx-auto mb-auto bg-primary h-10 w-10" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>

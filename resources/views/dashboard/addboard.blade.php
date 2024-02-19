@@ -11,7 +11,7 @@
             </div>
             <div class="card-body">
             <div class="row"> 
-                <form method="POST" action="save">
+                <form method="POST" action="save" enctype="multipart/form-data">
                     <div class="row">
                     <div class="col-md-4">
                             <button type="submit" class="btn btn-success">Simpan</button>
@@ -36,6 +36,7 @@
                                 <label>Jenis Mobil</label>
                                 <input type="text" class="form-control" name="jenis" />
                             </div>
+                            <br>
                             <div class="form-group form-control">
                                 <label>Kondisi</label>
                                 <select name="id_kondisi" id="id_kondisi">

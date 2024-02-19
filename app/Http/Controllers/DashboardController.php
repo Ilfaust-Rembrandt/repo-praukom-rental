@@ -9,14 +9,7 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    
-    public function AdminBoard(Mobil $mobil, Kondisi $kondisi){
-        $data = [
-            'mobil' => $mobil->all(),
-            'kondisi' => $kondisi->all()
-        ];
-        return view('dashboard.dashboard', $data);
-    }
+    //Start of Servis
     public function ServisBoard(servis $servis, kondisi $kondisi){
         $data = [ 
             'servis' => $servis->all(),
@@ -24,28 +17,41 @@ class DashboardController extends Controller
         ];
         return view('dashboard.servis.servis', $data);
     }
-    public function Addvis(Request $request, Servis $servis){
+    public function Savis(Request $request, Servis $servis){
         $data= $request->validate(
             [
                 'id_kondisi'=>'required',
-                'no_parts'=>'required',
+                'nama_parts'=>'required',
                 'tgl_servis'=>'required',
                 'id_parts'=>'required',
                 'no_parts_ganti'=>'required'
-            ],
-            );
+            ]);
         if($data):
             $servis->create($data);
-            return redirect('/servis');
+            return redirect('/dashboard/servis');
         else:
             return redirect ('/servis/add');
         endif;
     }
-    public function Add(kondisi $kondisi){
+
+    public function Addvis(kondisi $kondisi){
         $data = [
             'kondisi' => $kondisi->all()
+            
         ];
-        return view('dashboard.addboard', $data);
+        return view('dashboard.servis.addvis', $data);
+    }
+
+    //End of Servis
+
+    //Start of Mobil
+        
+    public function AdminBoard(Mobil $mobil, Kondisi $kondisi){
+        $data = [
+            'mobil' => $mobil->all(),
+            'kondisi' => $kondisi->all()
+        ];
+        return view('dashboard.dashboard', $data);
     }
     public function Save(Request $request, Mobil $mobil){
         $data = $request->validate([
@@ -56,12 +62,22 @@ class DashboardController extends Controller
             'id_kondisi'=>'required',
             'biaya' => 'required'
         ]);
-        if($data):
+        if($data && $request->hasFile('foto') && $request->file('foto')->isValid()){
+            $foto_file = $request->file('foto');
+            $foto_nama = md5($foto_file->getClientOriginalName(). time()). '.'. $foto_file->getClientOriginalExtension();
+            $foto_file->move(public_path('img'), $foto_nama);
+            $data['foto'] = $foto_nama;
             $mobil->create($data);
             return redirect('/dashboard');
-        else:
+        }else{
             return redirect('/dashboard/addboard');
-        endif;
+        }
+    }
+    public function Add(kondisi $kondisi){
+        $data = [
+            'kondisi' => $kondisi->all()
+        ];
+        return view('dashboard.addboard', $data);
     }
 
     public function Edit(Request $request, mobil $mobil, kondisi $kondisi){

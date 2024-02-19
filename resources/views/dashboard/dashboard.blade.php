@@ -33,7 +33,9 @@
                             @foreach($mobil as $m)
                                     <tr>
                                         <td>{{$m->nama}}</td>
-                                        <td>{{$m->foto}}</td>
+                                        <td>
+                                            <img src="http://localhost:8000/img/{{$m->foto}}" alt="">
+                                        </td>
                                         <td>{{$m->merk}}</td>
                                         <td>{{$m->jenis}}</td>
                                         @foreach ($kondisi as $k)

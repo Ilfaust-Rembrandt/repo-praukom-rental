@@ -1,5 +1,5 @@
 @extends('dashboard.layout')
-@section('title', 'Admin Board')
+@section('title', 'Servis Board')
 @section('content')
 <div class="row d-flex justify-content-center">
     <div class="col-md-auto">
@@ -11,7 +11,7 @@
             </div>
             <div class="card-body">
             <div class="row"> 
-                <form method="POST" action="save">
+                <form method="POST" action="savis">
                     <div class="row">
                     <div class="col-md-4">
                             <button type="submit" class="btn btn-success">Simpan</button>
@@ -22,12 +22,13 @@
                         <div class="col-md-5">
                         <div class="form-group">
                                 <label>Tanggal Servis</label>
-                                <input type="text" class="form-control" name="tanggal" />
+                                <input type="date" class="form-control" name="tgl_servis" />
                             </div>
                             <div class="form-group">
                                 <label>Nama Parts</label>
-                                <input type="text" class="form-control" name="nama" />
+                                <input type="text" class="form-control" name="nama_parts" />
                             </div>
+                            <br>
                             <div class="form-group form-control">
                                 <label>Kondisi</label>
                                 <select name="id_kondisi" id="id_kondisi">
@@ -38,24 +39,13 @@
                             </div>
                             <div class="form-group">
                                 <label>No Parts Ganti</label>
-                                <input type="text" class="form-control" name="ganti" />
+                                <input type="text" class="form-control" name="no_parts_ganti" />
                             </div>
-                            <div class="form-group form-control">
+                            <div class="form-group">
                                 <label>Id Parts</label>
-                                <input type="text" class="form-control" name="parts">
-                            </div>
-                            
-                        </div><strong>DATABASE CONNECTED: </strong>
-<?php
-    use Illuminate\Support\Facades\DB;
-    try {
-        DB::connection()->getPDO();
-        echo DB::connection()->getDatabaseName();
-    } catch (\Exception $e) {
-        echo 'none';
-    }
-    ?>
-                        
+                                <input type="text" class="form-control" name="id_parts">
+                                @csrf
+                            </div>                        
                     </div>
                 </form>
             </div>
