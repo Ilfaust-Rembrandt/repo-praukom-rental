@@ -17,5 +17,18 @@ class kondisiSeeder extends Seeder
             'id_kondisi' => '1',
             'jenis_kondisi' => 'Rusak'
         ]);
+        DB::table('kondisi')->insert([
+            'id_kondisi' => '2',
+            'jenis_kondisi' => 'Bengkel'
+        ]);
+        DB::table('kondisi')->insert([
+            'id_kondisi' => '3',
+            'jenis_kondisi' => 'Aman'
+        ]);
+        DB::table('kondisi')->insert([
+            'id_kondisi' => '4',
+            'jenis_kondisi' => 'Hilang'
+        ]);
+
     }
 }

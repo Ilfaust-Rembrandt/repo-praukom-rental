@@ -26,6 +26,7 @@ Route::post('/register', [LoginController::class, 'register'])->name('prosreg');
 Route::get('/register', [LoginController::class, 'RegisForm'])->name('register');
 
 Route::get('/', [SelectionController::class, 'SelectionPage'])->name('selection.page');
+Route::get('/selview', [SelectionController::class, 'SelectionInfo'])->name('selection.info');
 
 Route::middleware(['auth'])
     ->group(function () {

@@ -27,6 +27,7 @@
                             <div class="form-group">
                                 <label>Foto Mobil</label>
                                 <input type="file" class="form-control" name="foto" />
+                                <span style="font-size: 10px;">DO NOT USE THE SAME FILE</span>
                             </div>
                             <div class="form-group">
                                 <label>Merk Mobil</label>

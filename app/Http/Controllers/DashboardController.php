@@ -8,6 +8,7 @@ use App\Models\mobil;
 use App\Models\servis;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 class DashboardController extends Controller
 {
@@ -20,6 +21,7 @@ class DashboardController extends Controller
             return view('dashboard.log', $data);
         }
     //End of Logs
+    
     //Start of Servis
     public function ServisBoard(servis $servis, kondisi $kondisi){
         $data = [ 
@@ -65,7 +67,7 @@ class DashboardController extends Controller
         ];
         return view('dashboard.dashboard', $data);
     }
-    public function Save(Request $request, Mobil $mobil){
+    public function Save(Request $request){
         $data = $request->validate([
             'foto'=>'required',
             'nama' => 'required',
@@ -76,7 +78,7 @@ class DashboardController extends Controller
         ]);
         if($data && $request->hasFile('foto') && $request->file('foto')->isValid()){
             $foto_file = $request->file('foto');
-            $foto_nama = md5($foto_file->getClientOriginalName(). time()). '.'. $foto_file->getClientOriginalExtension();
+            $foto_nama = md5($foto_file->getClientOriginalName() . time()) . '.' . $foto_file->getClientOriginalExtension();
             $foto_file->move(public_path('img'), $foto_nama);
             $data['foto'] = $foto_nama;
             $sukses = DB::statement("CALL CreateMobil(?,?,?,?,?,?)", [$data['id_kondisi'], $data['nama'], $foto_nama, $data['merk'], $data['jenis'], $data['biaya']] );
@@ -100,6 +102,7 @@ class DashboardController extends Controller
             'kondisi' => $kondisi->all()
         ];
         return view('dashboard.editboard', $data);
+        
     }
 
     public function Update(Request $request, mobil $mobil){
@@ -117,7 +120,7 @@ class DashboardController extends Controller
             return redirect('/dashboard');
         }else{
             return back()->with('error', 'Data mobil diupdate');
-        }
+        }   
     }
     public function Delete(Request $request, mobil $mobil){
         $id_mobil = $request->id_mobil;
