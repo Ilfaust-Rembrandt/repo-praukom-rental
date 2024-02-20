@@ -13,7 +13,7 @@ class SelectionController extends Controller
         ];
         return view('selection.selection', $data);
     }
-    public function Lambo(){
-        return view('selection.lambo');
+    public function SelectionInfo(mobil $mobil){
+        
     }
 }

@@ -39,6 +39,7 @@ Route::middleware(['auth'])
         Route::get('/servis', [DashboardController::class, 'ServisBoard'])->name('servisboard');
         Route::get('/addvis', [DashboardController::class, 'Addvis'])->name('addvis');
         Route::post('/savis', [DashboardController::class, 'Savis'])->name('savis');
+        Route::get('/logs', [DashboardController::class, 'Logs'])->name('logs');
     });    
 });
 

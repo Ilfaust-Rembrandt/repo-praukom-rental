@@ -51,8 +51,8 @@
 @endsection
 @section('footer')
 <div style="width: 150%; height: 100%; position: relative">
-    <div style="width: 100%; height: 200px; left: 0px; position: fixed; background: #EEF214; top:auto; bottom:0;"></div>
-    <img style="width: auto; height: auto; left: 62%; position: fixed; top:72%;" src="{{ asset('img/orange2.png') }}" />
-    <div style="width: 488px; height: 18%; left: 15%; position: fixed; top:auto; bottom:0;color: black; font-size: 36px; font-family: Sans-serif; font-weight: 500; word-wrap: break-word">Hubungi sekarang dan pesan mobil yang ingin anda sewa</div>
+    <div style="width: 100%; height: 190px; left: 0px; position: fixed; background: #EEF214; top:auto; bottom:0;"></div>
+    <img style="width: 20%; height: auto; left: 62%; position: fixed; top:72%;" src="{{ asset('img/orange2.png') }}" />
+    <div style="width: 488px; height: 18%; left: 15%; position: fixed; top: 77%; bottom:0;color: black; font-size: 36px; font-family: Sans-serif; font-weight: 500; word-wrap: break-word">Hubungi sekarang dan pesan mobil yang ingin anda sewa</div>
 </div>
 @endsection

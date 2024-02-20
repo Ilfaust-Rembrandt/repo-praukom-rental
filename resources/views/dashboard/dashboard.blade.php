@@ -8,6 +8,7 @@
                 <span class="h1">
                     Data Mobil
                 </span>
+                <p style="margin-top: 30px">Jumlah Data : {{ $totalMobil }}</p>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -34,7 +35,7 @@
                                     <tr>
                                         <td>{{$m->nama}}</td>
                                         <td>
-                                            <img src="http://localhost:8000/img/{{$m->foto}}" alt="">
+                                            <img src="http://localhost:8000/img/{{$m->foto}}" width="300px" height="200px" alt="">
                                         </td>
                                         <td>{{$m->merk}}</td>
                                         <td>{{$m->jenis}}</td>

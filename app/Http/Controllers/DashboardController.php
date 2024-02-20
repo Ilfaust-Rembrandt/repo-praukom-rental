@@ -3,12 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Models\kondisi;
+use App\Models\Logs;
 use App\Models\mobil;
 use App\Models\servis;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
+    //Start of Logs
+        public function Logs(Logs $logs){
+            $data = [
+                'logs'=> $logs->orderBy('id_log', 'desc')->get(),
+            ];
+
+            return view('dashboard.log', $data);
+        }
+    //End of Logs
     //Start of Servis
     public function ServisBoard(servis $servis, kondisi $kondisi){
         $data = [ 
@@ -49,7 +60,8 @@ class DashboardController extends Controller
     public function AdminBoard(Mobil $mobil, Kondisi $kondisi){
         $data = [
             'mobil' => $mobil->all(),
-            'kondisi' => $kondisi->all()
+            'kondisi' => $kondisi->all(),
+            'totalMobil' => DB::select('SELECT CountMobil() AS totalMobil')[0]->totalMobil
         ];
         return view('dashboard.dashboard', $data);
     }
@@ -67,12 +79,14 @@ class DashboardController extends Controller
             $foto_nama = md5($foto_file->getClientOriginalName(). time()). '.'. $foto_file->getClientOriginalExtension();
             $foto_file->move(public_path('img'), $foto_nama);
             $data['foto'] = $foto_nama;
-            $mobil->create($data);
+            $sukses = DB::statement("CALL CreateMobil(?,?,?,?,?,?)", [$data['id_kondisi'], $data['nama'], $foto_nama, $data['merk'], $data['jenis'], $data['biaya']] );
+            if ($sukses) {
             return redirect('/dashboard');
         }else{
             return redirect('/dashboard/addboard');
         }
     }
+}
     public function Add(kondisi $kondisi){
         $data = [
             'kondisi' => $kondisi->all()
