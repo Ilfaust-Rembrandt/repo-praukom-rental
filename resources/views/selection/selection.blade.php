@@ -4,8 +4,8 @@
 <div id="carouselExampleCaptions" class="carousel slide">
   <div class="carousel-inner">
     @foreach ($mobil as $m)
-    <div class="carousel-item {{ $m->id_mobil == 1 ? 'active' : '' }}">
-      <a href="{{route('selection.info')}}">
+    <div class="carousel-item {{ $loop->index == 0 ? 'active' : '' }}">
+      <a href="selection/info/{{$m->id_mobil}}">
       <img src="http://localhost:8000/img/{{$m->foto}}" class="d-block mt-auto my-auto mx-auto rounded" alt="..." style="height:391.5px; width:600px;">
       <div class="carousel-caption d-none d-md-block">
         <h5>{{ $m->nama }}</h5>

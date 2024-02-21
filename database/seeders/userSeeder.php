@@ -22,7 +22,7 @@ class userSeeder extends Seeder
 
         DB::table('user')->insert([
             'username' => 'guest',
-            'email' => 'none',
+            'role'=>'1',
         ]);
     }
 }

@@ -14,12 +14,12 @@ class SelectionController extends Controller
         ];
         return view('selection.selection', $data);
     }
-    public function SelectionInfo(mobil $mobil, kondisi $kondisi){
+    public function SelectionInfo(Request $request, mobil $mobil, kondisi $kondisi){
         $data = [
-            'mobil' => $mobil->all(),
+            'mobil' => $mobil->where('id_mobil', $request->id)->first(),
             'kondisi' => $kondisi->all()
         ];
-
         return view('selection.selview', $data);
+        
     }
 }

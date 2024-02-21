@@ -31,11 +31,7 @@
                     </li>
                     <li>
                         <a href="{{route('logs')}}" class="nav-link px-0 align-middle ">
-                            <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Logs</span></a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Customers</span> </a>
+                            <i class="fa-solid fa-table"></i> <span class="ms-1 d-none d-sm-inline">Logs</span></a>
                     </li>
                 </ul>
                 <hr>
