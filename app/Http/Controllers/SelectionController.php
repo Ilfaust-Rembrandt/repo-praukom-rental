@@ -19,7 +19,7 @@ class SelectionController extends Controller
             'mobil' => $mobil->where('id_mobil', $request->id)->first(),
             'kondisi' => $kondisi->all()
         ];
-        return view('selection.selview', $data);
+        return view('dashboard.addboard', $data);
         
     }
 }

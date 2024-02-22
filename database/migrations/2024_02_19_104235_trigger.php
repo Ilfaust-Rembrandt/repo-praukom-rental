@@ -31,6 +31,26 @@ return new class extends Migration
                 VALUES ("mobil", "admin", CURDATE(), CURTIME(), "Hapus", "Sukses");
             END
         ');
+
+        DB::unprepared('
+            CREATE TRIGGER add_servis
+            BEFORE INSERT ON servis
+            FOR EACH ROW
+            BEGIN
+                INSERT logs(tabel, aktor, tanggal, jam, aksi, record)
+                VALUES ("Servis", "admin", CURDATE(), CURTIME(), "Tambah", "Sukses");
+            END
+        ');
+
+        DB::unprepared('
+            CREATE TRIGGER del_servis
+            AFTER DELETE ON servis
+            FOR EACH ROW
+            BEGIN
+                INSERT logs(tabel, aktor, tanggal, jam, aksi, record)
+                VALUES ("Servis", "admin", CURDATE(), CURTIME(), "Hapus", "Sukses");
+            END
+        ');
     }
 
     /**
